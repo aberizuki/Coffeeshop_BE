@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 const router = require("./src/route/index.route");
 const cors = require("cors");
-
+const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.static("public"));
 app.use(urlencoded({ extended: true }));
@@ -24,7 +24,7 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(5000, (req, res) => {
+app.listen(port, (req, res) => {
   console.log("backend successfully running on port 5000");
 });
 
