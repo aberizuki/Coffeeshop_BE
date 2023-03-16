@@ -25,7 +25,7 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, (req, res) => {
-  console.log("backend successfully running on port 5000");
+  console.log(`backend successfully running on port ${port}`);
 });
 
 //defaultnya express js itu ga menerima semua jenis form.
